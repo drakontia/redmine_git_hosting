@@ -24,6 +24,10 @@ describe UsersController do
         get :edit, :id => @user.id
       end
 
+      it "has a mail" do
+        expect(assigns(User.current.mail)).to eq [@user.mail]
+      end
+
       it "populates an array of gitolite_user_keys" do
         expect(assigns(:gitolite_user_keys)).to eq [@user_key]
       end
