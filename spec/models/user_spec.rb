@@ -15,4 +15,8 @@ describe User do
   it "has a gitolite_identifier" do
     expect(@user.gitolite_identifier).to match(/redmine_user\d+_\d+/)
   end
+
+  it "has a mail" do
+    expect(@user.mail).to match(/user\d+@awesome.com/)
+  end
 end
